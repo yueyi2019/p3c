@@ -7,7 +7,7 @@ public class UserThreadFactory implements ThreadFactory {
 	private final String namePrefix;
 	private final AtomicInteger nextId = new AtomicInteger(1);
 
-	//¶¨ÒåÏß³Ì×éÃû³Æ£¬ÔÚ jstack ÎÊÌâÅÅ²éÊ±£¬·Ç³£ÓĞ°ïÖú
+	// å®šä¹‰çº¿ç¨‹æ± åå­—
 	UserThreadFactory(String whatFeaturOfGroup) {
 		namePrefix = "From UserThreadFactory's " + whatFeaturOfGroup + "-Worker-";
 	}

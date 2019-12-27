@@ -19,13 +19,13 @@ public class RandomTest {
 		System.out.println(random5.nextInt(100));
 		
 		System.out.println(Math.random());
-		// ÓĞµÄÈËÈ¡ÕûÊıÕâÃ´¸É£¬²»ÒªÏÂÃæÕâÃ´¸É
+		// æœ‰äººè¿™ä¹ˆå†™ï¼Œä¸å¯¹
 //		System.out.println((int)(Math.random() * 1000));
 		for (int i = 0; i < 10; i++) {
 			System.out.println(new Random().nextInt(10000));
 		}
 		System.out.println("=====");
-		// TheadLocalRandomÊ¹ÓÃ·½·¨
-		System.out.println(ThreadLocalRandom.current().nextInt(100));;
+		// ç”¨è¿™ä¸ªæ²¡æœ‰çº¿ç¨‹é—®é¢˜
+//		System.out.println(ThreadLocalRandom.current().nextInt(100));;
 	}
 }

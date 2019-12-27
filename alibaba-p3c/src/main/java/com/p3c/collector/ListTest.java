@@ -9,10 +9,10 @@ public class ListTest {
 		String[] strArray = new String[] {"1","2"};
 		List<String> list = Arrays.asList(strArray);
 		System.out.println(list.toString());
-		// set正常
+		
 //		list.set(0, "3");
 //		System.out.println(list.toString());
-		// 下面异常
+		
 //		list.add("4");
 		System.out.println(Arrays.toString(strArray));
 		System.out.println(list.toString());

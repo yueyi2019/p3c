@@ -16,7 +16,7 @@ public class Test {
 		
 		list.add("0");
 		list.add("1");
-		// 把2换成7，测试ArrayList稳定性，un有序性
+		
 		list.add("2");
 //		list.add("7");
 		list.add("3");

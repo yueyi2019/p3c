@@ -24,19 +24,10 @@ public class ListToArray {
 		System.out.println(Arrays.toString(a));
 		list.set(0, "dd");
 		System.out.println(Arrays.toString(a));
-//		Long start,end;
+
 //		start = Instant.now().getEpochSecond();
-//		list.toArray(new String[list.size()]);
-//		end = Instant.now().getEpochSecond();
-//		System.out.println("size大小时长"+(end - start));
-//		
-//		start = Instant.now().getEpochSecond();
-//		list.toArray(new String[0]);
-//		end = Instant.now().getEpochSecond();
-//		System.out.println("0大小时长"+(end - start));
 		
-		
-		// 看源码用
+		// 鐪嬫簮鐮佺敤
 //		Collections.addAll(c, elements)
 		
 	}

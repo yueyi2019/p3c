@@ -3,12 +3,11 @@ package com.p3c.oop;
 public class SpiltTest {
 	
 	public static void main(String[] args) {
-		// Ô¤ÆÚ´óÓÚ3£¬Êµ¼ÊÊÇ3£¬Êı×éÈ¡ÖµÊ±£¬×¢ÒâÅĞ¶ÏÔ½½ç
+		// é¢„æœŸæ˜¯å¤§äº3
 //		String testStr = "a, b, c ,,";
 //		String[] strArray = testStr.split(",");
 //		System.out.println(strArray);
 		
-		// À©Õ¹
 		String line = "hello,,world,,,";
         String res1[] = line.split(",");
         String res2[] = line.split(",", -1);

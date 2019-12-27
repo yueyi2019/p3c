@@ -4,7 +4,7 @@ public class CloneTest {
 	public static void main(String[] args) throws CloneNotSupportedException {
 		Person p1 = new Person("1", new Son("erzi"));
 		Person p2 = (Person)p1.clone();
-		p2.getSon().setSonName("ÀÏ¶ş");
+		p2.getSon().setSonName("å„¿å­");
 		System.out.println(p1.toString());
 		System.out.println(p2.toString());
 	}
@@ -32,10 +32,10 @@ class Person implements Cloneable{
 	@Override
 	protected Object clone() throws CloneNotSupportedException {
 		// TODO Auto-generated method stub
-		// Ç³¿½±´
+		// è°ƒç”¨çˆ¶clone
 //		return super.clone();
 		
-		// Éî¿½±´
+		// è‡ªå®šä¹‰å…‹éš†
 		Person p = (Person)super.clone();
 		p.setSon((Son)p.getSon().clone());
 		return p;

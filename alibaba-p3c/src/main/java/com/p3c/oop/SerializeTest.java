@@ -13,8 +13,7 @@ public class SerializeTest {
 	
 	public static void main(String[] args) {
 		try {
-			// ĞŞ¸ÄÍêdogµÄ°æ±¾ºÅ£¬ÔÙ·´ĞòÁĞ»¯¡£
-//			serializeDog();
+			serializeDog();
 			Dog d = deserializeFlyPig();
 			System.out.println(d.getColor());
 		} catch (IOException e) {
@@ -27,7 +26,7 @@ public class SerializeTest {
 	}
 	
 	/**
-     * ĞòÁĞ»¯
+     * åºåˆ—åŒ–
      */
     private static void serializeDog() throws IOException {
         Dog dog = new Dog();
@@ -35,18 +34,26 @@ public class SerializeTest {
         
         ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(new File(FILE_PATH)));
         oos.writeObject(dog);
-        System.out.println("dog ¶ÔÏóĞòÁĞ»¯³É¹¦£¡");
+        System.out.println("dog åºåˆ—åŒ–æˆåŠŸ");
         oos.close();
     }
  
     /**
-     * ·´ĞòÁĞ»¯
+     * ååºåˆ—åŒ–
      */
-    private static Dog deserializeFlyPig() throws Exception {
-        ObjectInputStream ois = new ObjectInputStream(new FileInputStream(new File(FILE_PATH)));
-        Dog dog = (Dog) ois.readObject();
-        System.out.println("dog ¶ÔÏó·´ĞòÁĞ»¯³É¹¦£¡");
-        return dog;
+    private static Dog deserializeFlyPig() {
+    	Dog dog = null;
+    	// jdk7åwith-resource
+    	try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream(new File(FILE_PATH)));){
+    		dog = (Dog) ois.readObject();
+            System.out.println("dog ååºåˆ—åŒ–æˆåŠŸ");
+            
+    	}catch (Exception e) {
+			// TODO: handle exception
+    		e.printStackTrace();
+		}
+    	return dog;
+        
     }
 }
 

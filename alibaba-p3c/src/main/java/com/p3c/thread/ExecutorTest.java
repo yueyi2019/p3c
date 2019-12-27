@@ -10,7 +10,7 @@ public class ExecutorTest {
 		
 	}
 	/**
-	 * ´´½¨¹Ì¶¨´óĞ¡µÄÏß³Ì³Ø
+	 * å›ºå®šçº¿ç¨‹æ± 
 	 */
 	public static void createFixedThreadPool() {
 		ExecutorService executorService = Executors.newFixedThreadPool(5);
@@ -31,7 +31,7 @@ public class ExecutorTest {
 				}
 			});
 		}
-		// ´ËÊ±²¢²»»áÁ¢¼´ÖÕÖ¹ËùÓĞÈÎÎñ£¬¶øÊÇµÈ´ıËùÓĞÈÎÎñÍê³Éºó£¬ÔÙ¹Ø±ÕÏß³Ì³Ø¡£
+		// å…³é—­çº¿ç¨‹æ± 
 		executorService.shutdown();
 	}
 }

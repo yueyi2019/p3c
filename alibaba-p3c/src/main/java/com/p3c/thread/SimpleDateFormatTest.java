@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 public class SimpleDateFormatTest {
 	
-	// ÓÃ´Ë¶¨Òå»á·¢ÉúÏß³Ì°²È«ÎÊÌâ£¬²¢Å×Òì³£
+	// é¢„å…ˆå®šä¹‰æ ¼å¼
 	private static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	
 	private static final ThreadLocal<SimpleDateFormat> simpleDateFormatSalfe = new ThreadLocal<SimpleDateFormat>() {
@@ -22,15 +22,13 @@ public class SimpleDateFormatTest {
 	};
 
 	public static void main(String[] args) {
-		// ÅäºÏµÚÒ»ÖÖÏß³Ì²»°²È«µÄ·½Ê½µ÷ÓÃ
 //		createFixedThreadPool();
 		
-		// ÅäºÏµÚ¶şÖÖÏß³Ì°²È«·½Ê½
 		createFixedThreadPoolSafe();
 	}
 
 	/**
-	 * ´´½¨¹Ì¶¨´óĞ¡µÄÏß³Ì³Ø
+	 * æœ‰çº¿ç¨‹é—®é¢˜
 	 */
 	public static void createFixedThreadPool() {
 		ExecutorService executorService = Executors.newFixedThreadPool(5);
@@ -50,7 +48,7 @@ public class SimpleDateFormatTest {
 				}
 			});
 		}
-		// ´ËÊ±²¢²»»áÁ¢¼´ÖÕÖ¹ËùÓĞÈÎÎñ£¬¶øÊÇµÈ´ıËùÓĞÈÎÎñÍê³Éºó£¬ÔÙ¹Ø±ÕÏß³Ì³Ø¡£
+		// æ²¡æœ‰çº¿ç¨‹é—®é¢˜
 		executorService.shutdown();
 	}
 	public static void createFixedThreadPoolSafe() {
@@ -74,7 +72,6 @@ public class SimpleDateFormatTest {
 				}
 			});
 		}
-		// ´ËÊ±²¢²»»áÁ¢¼´ÖÕÖ¹ËùÓĞÈÎÎñ£¬¶øÊÇµÈ´ıËùÓĞÈÎÎñÍê³Éºó£¬ÔÙ¹Ø±ÕÏß³Ì³Ø¡£
 		executorService.shutdown();
 	}
 }

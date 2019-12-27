@@ -12,37 +12,37 @@ public class ForeachTest {
 		list.add("2");
 		list.add("3");
 		list.add("4");
-		//µÚÒ»²½ ÕıÈ·ÒÆ³ı
+		
 //		list.remove("4");
 //		System.out.println(list);
 		
-		// Òì³£ µÚ¶ş²½ °Ñ3ÒÀ´Î»»³É 1£¬2£¬4
-		for (String string : list) {
-			if(string.equals("1")) {
-				list.remove(string);
-			}
-		}
-		System.out.println(list);
+		// æ¢æˆ2 3 4 ï¼Œé™¤äº†3æ­£å¸¸ï¼Œå…¶ä»–å¼‚å¸¸
+//		for (String string : list) {
+//			if(string.equals("14")) {
+//				list.remove(string);
+//			}
+//		}
+//		System.out.println(list);
 		
-		// ÕıÈ·²Ù×÷£¬ÒÀ´Î»»Êı×Ö
+		// æ­£ç¡®
 //		Iterator<String> iterator = list.iterator();
 //		while (iterator.hasNext()) {
 //			String str = iterator.next();
-//			if("4".equals(str)) {
+//			if("1".equals(str)) {
 //				iterator.remove();
 //			}
 //			
 //		}
 //		System.out.println(list);
 		
-		// ÕıÈ·²Ù×÷ÒÀ´Î»»Êı×Ö
-//		for (int i = 0; i < list.size(); i++) {
-//			String string = list.get(i);
-//			if(string.equals("4")) {
-//				list.remove(string);
-//			}
-//		}
-//		System.out.println(list);
+		// æ­£å¸¸
+		for (int i = 0; i < list.size(); i++) {
+			String string = list.get(i);
+			if(string.equals("1")) {
+				list.remove(string);
+			}
+		}
+		System.out.println(list);
 		
 //		System.out.println(list.toString());
 //		GenericsTest.getAnimal();

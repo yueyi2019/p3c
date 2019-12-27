@@ -15,7 +15,4 @@ public class ApiTestController {
 		return "test";
 	}
 	
-//	public void testVairable(int a , String ... names, int b) {
-//		
-//	}
 }

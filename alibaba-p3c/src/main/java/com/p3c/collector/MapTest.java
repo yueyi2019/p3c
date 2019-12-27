@@ -12,7 +12,7 @@ public class MapTest {
 		map.put("3", "c");
 		
 		Set<String> s = map.keySet();
-		// 不能执行下面操作
+		
 //		s.add("4");
 		map.put("5", "d");
 		System.out.println(map);

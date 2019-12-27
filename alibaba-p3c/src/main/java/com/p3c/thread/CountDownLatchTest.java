@@ -14,18 +14,18 @@ public class CountDownLatchTest {
             int index = i;
             new Thread(() -> {
                 try {
-                    System.out.println("µÚ" + index + "¿ÅÁúÖéÒÑÊÕ¼¯µ½£¡");
-                    //Ä£ÄâÊÕ¼¯µÚi¸öÁúÖé,Ëæ»úÄ£Äâ²»Í¬µÄÑ°ÕÒÊ±¼ä
+                    System.out.println("ç¬¬" + index + "å‡ ä¸ªé¾™ç ");
+                    // æ¨¡ä»¿ç­‰å¾…
                     Thread.sleep(new Random().nextInt(3000));
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                //Ã¿ÊÕ¼¯µ½Ò»¿ÅÁúÖé,ĞèÒªµÈ´ıµÄ¿ÅÊı¼õ1
+                // ç”¨countDownæ˜¯å¿…é¡»çš„ã€‚
                 countDownLatch.countDown();
             }).start();
         }
-        //µÈ´ı¼ì²é£¬¼´ÉÏÊö7¸öÏß³ÌÖ´ĞĞÍê±ÏÖ®ºó£¬Ö´ĞĞawaitºó±ßµÄ´úÂë
+        // å‡‘é½äº†é¾™ç 
         countDownLatch.await();
-        System.out.println("¼¯ÆëÆß¿ÅÁúÖé£¡ÕÙ»½ÉñÁú£¡");
+        System.out.println("å¯ä»¥å¬å”¤ç¥é¾™");
     }
 }

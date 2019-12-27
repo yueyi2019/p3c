@@ -6,11 +6,11 @@ import java.util.Objects;
 public class EquealTest {
 	public static void main(String[] args) {
 		
-		// jdk7 后
-//		boolean b = Objects.equals("a", new String("ab"));
-//		System.out.println(b);
+		// jdk7 equals
+		boolean b = Objects.equals("a", new String("ab"));
+		System.out.println(b);
 		
-		// 下面一起
+		// 璇曡瘯
 //		Integer intA = 3,intB = 3;
 //		System.out.println(intA == intB);
 //		Integer intC = 200,intD = 200;
@@ -18,10 +18,8 @@ public class EquealTest {
 //		System.out.println(intA.equals(intB));
 //		System.out.println(intC.equals(intD));
 		
-//		System.out.println(4.0f-2.0f);
-		
-		// 看源码用
-		BigDecimal b = new BigDecimal(1.0);
+		// 鐪嬫簮鐮佷腑娉ㄩ噴
+//		BigDecimal b = new BigDecimal(1.0);
 		
 		float f1 = 0.55f;
 		float f2 = 0.5f;

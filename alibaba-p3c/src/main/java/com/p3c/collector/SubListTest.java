@@ -18,7 +18,7 @@ public class SubListTest {
 		list.add("c");
 		System.out.println(list.toString());
 		List a = list.subList(0, 1);
-		// 此时添加d，源集合也响应的更改。
+		
 		a.add("d");
 		list.add("e");
 		System.out.println(list.toString());
@@ -32,9 +32,7 @@ public class SubListTest {
 		list.add("d");
 		list.add("e");
 		List a = list.subList(1, 3);
-		/* 删掉其中元素，再访问a 会报错，因为源删除，导致list a 中少元素了。
-		 * list执行 remove 后 ，debug看a，里面有异常了。
-		 */
+		
 		list.remove("b");
 		System.out.println(list.toString());
 		
