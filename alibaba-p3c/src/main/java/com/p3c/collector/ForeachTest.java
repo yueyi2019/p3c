@@ -16,33 +16,34 @@ public class ForeachTest {
 //		list.remove("4");
 //		System.out.println(list);
 		
-		// 换成2 3 4 ，除了3正常，其他异常
-//		for (String string : list) {
-//			if(string.equals("14")) {
+//		 换成2 3 4 ，除了3正常，其他异常
+		for (String string : list) {
+			if(string.equals("4")) {
+				list.remove(string);
+			}
+		}
+		
+		System.out.println(list);
+		
+		// 正确
+		Iterator<String> iterator = list.iterator();
+		while (iterator.hasNext()) {
+			String str = iterator.next();
+			if("1".equals(str)) {
+				iterator.remove();
+			}
+			
+		}
+		System.out.println(list);
+		
+		// 正常
+//		for (int i = 0; i < list.size(); i++) {
+//			String string = list.get(i);
+//			if(string.equals("1")) {
 //				list.remove(string);
 //			}
 //		}
 //		System.out.println(list);
-		
-		// 正确
-//		Iterator<String> iterator = list.iterator();
-//		while (iterator.hasNext()) {
-//			String str = iterator.next();
-//			if("1".equals(str)) {
-//				iterator.remove();
-//			}
-//			
-//		}
-//		System.out.println(list);
-		
-		// 正常
-		for (int i = 0; i < list.size(); i++) {
-			String string = list.get(i);
-			if(string.equals("1")) {
-				list.remove(string);
-			}
-		}
-		System.out.println(list);
 		
 //		System.out.println(list.toString());
 //		GenericsTest.getAnimal();

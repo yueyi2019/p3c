@@ -25,5 +25,5 @@ public class IsPropertiesTest {
 	public void setFail(boolean isFail) {
 		this.isFail = isFail;
 	}
-
+	
 }

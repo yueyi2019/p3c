@@ -3,20 +3,24 @@ package com.p3c.thread;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 public class ExecutorTest {
 	public static void main(String[] args) {
 		createFixedThreadPool();
-		
 	}
 	/**
 	 * 固定线程池
 	 */
 	public static void createFixedThreadPool() {
 		ExecutorService executorService = Executors.newFixedThreadPool(5);
-//		Executors.newSingleThreadExecutor();
-//		Executors.newCachedThreadPool();
-//		Executors.newScheduledThreadPool(10);
+		
+		Executors.newSingleThreadExecutor();
+		Executors.newCachedThreadPool();
+		Executors.newScheduledThreadPool(10);
+		
 		for(int i=0;i<10;i++){
 		    executorService.execute(new Runnable() {
 				

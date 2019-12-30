@@ -12,17 +12,17 @@ public class SerializeTest {
 	static final String FILE_PATH = "c:/msb/dog.txt";
 	
 	public static void main(String[] args) {
-		try {
-			serializeDog();
+//		try {
+//			serializeDog();
 			Dog d = deserializeFlyPig();
 			System.out.println(d.getColor());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 	}
 	
 	/**

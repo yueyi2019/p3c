@@ -7,8 +7,8 @@ import java.util.List;
 public class SubListTest {
 	
 	public static void main(String[] args) {
-		subList1();
-//		subList2();
+//		subList1();
+		subList2();
 	}
 	
 	public static void subList1() {
@@ -17,12 +17,13 @@ public class SubListTest {
 		list.add("b");
 		list.add("c");
 		System.out.println(list.toString());
+
 		List a = list.subList(0, 1);
 		
-		a.add("d");
+//		a.add("d");
 		list.add("e");
 		System.out.println(list.toString());
-		System.out.println(a.toString());
+//		System.out.println(a.toString());
 	}
 	public static void subList2() {
 		ArrayList<String> list = new ArrayList<String>();
@@ -36,8 +37,10 @@ public class SubListTest {
 		list.remove("b");
 		System.out.println(list.toString());
 		
-//		System.out.println(a.get(0));
-//		System.out.println(a.get(1));
+		System.out.println(a.get(0));
+		System.out.println(a.get(1));
+		
+		Arrays.asList(a);
 		
 	}
 }
